@@ -6,7 +6,7 @@ package by.grsu.cats.editor.validators;
 public class NameValidator implements Validator {
     public boolean validate(String s) {
         boolean ok = true;
-        if (s == null || s.isEmpty() || s.length() > 10) return ok = false;
+        if (s == null || s.isEmpty() || s.length() > 10) ok = false;
         return ok;
     }
 }
