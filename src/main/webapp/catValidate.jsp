@@ -1,3 +1,4 @@
+<%@ page import="java.util.Enumeration" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
@@ -15,6 +16,11 @@
 <jsp:setProperty name="catBean" property="color" param="color"></jsp:setProperty>
 
 <% System.out.println(catBean.toString());
+    Enumeration<String> arr = request.getParameterNames();
+    while(arr.hasMoreElements()) {
+        String cur = arr.nextElement();
+        System.out.println(cur + " = " + request.getParameter(cur));
+    }
 %>;
 <c:choose>
     <c:when test="${catBean.colorValid && catBean.nameValid}">

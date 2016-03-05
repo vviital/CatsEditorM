@@ -3,11 +3,12 @@
 <%@ page isELIgnored ="false" %>
 
 <html>
-<head>
-    <link type="text/css" rel="stylesheet" href="styles/styles.css">
+<head>`
     <title>Cat Profile</title>
 </head>
 <body>
+
+<jsp:include page="header.jsp"/>
 
 <jsp:useBean id="cat" scope="request" class="by.grsu.cats.editor.beans.CatBean">
     <jsp:setProperty name="cat" property="*"></jsp:setProperty>
@@ -36,5 +37,7 @@
             </td>
         </tr>
     </table>
+
+<jsp:include page="footer.jsp"/>
 </body>
 </html>

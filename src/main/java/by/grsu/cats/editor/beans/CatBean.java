@@ -66,8 +66,8 @@ public class CatBean implements Cloneable {
     private void init() {
         this.colorValidator = new ColorValidator();
         this.nameValidator = new NameValidator();
-        this.isColorValid = true;
-        this.isNameValid = true;
+        this.isColorValid = false;
+        this.isNameValid = false;
         this.hash = HashGenerator.getNext();
     }
 
