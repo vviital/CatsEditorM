@@ -57,14 +57,17 @@
 
 <div>
     <c:forEach items="${catsCollection.catBeanMap}" var="item">
+    <div class="divBorder">
         <form action="catProfile.jsp" method="post">
-            <div class="divBorder">
                 <div style="background-color: ${'#'}${item.value.color}">
                     <img class="image" src="pics/cat.png"/>
                 </div>
-                <input type="submit" value="${'edit '}${item.value.name}"/>
-            </div>
+                <input type="hidden" name="color" value="${item.value.color}"/>
+                <input type="hidden" name="hash" value="${item.value.hash}"/>
+                <input type="hidden" name="name" value="${item.value.name}"/>
+                <input class="inputText" type="submit" value="${'edit '}${item.value.name}"/>
         </form>
+    </div>
     </c:forEach>
 
 </div>

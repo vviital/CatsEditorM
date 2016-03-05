@@ -21,9 +21,11 @@ public class ProfileController extends HttpServlet{
         CatsCollectionBean catsCollection = (CatsCollectionBean)req.getSession().getAttribute("catsCollection");
         CatBean cat = (CatBean) req.getSession().getAttribute("catBean");
 
-        if (removeCommand != null) {
+        if ("remove".equals(removeCommand)) {
             catsCollection.tryRemove(cat.getHash());
-        } else if (saveCommand != null) {
+            req.getSession().removeAttribute("catBean");
+            resp.sendRedirect("index.jsp");
+        } else if ("save".equals(saveCommand)) {
             if (cat.isValid()) {
                 catsCollection.addCat(cat.clone());
                 req.getSession().removeAttribute("catBean");

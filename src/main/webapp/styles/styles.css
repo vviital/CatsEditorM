@@ -10,6 +10,8 @@
 .divBorder {
     width: 300px;
     height: 300px;
+    display: inline-block;
+    margin: 10px 10px 10px 10px;
 }
 
 .footer {
@@ -41,4 +43,8 @@ body {
 .fontsClass {
     color: antiquewhite;
     font-size: 16px;
+}
+
+.profileTable {
+    margin-left: 30px;
 }

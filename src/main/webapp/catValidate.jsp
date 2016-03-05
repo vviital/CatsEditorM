@@ -10,12 +10,12 @@
 </head>
 <body>
 
-<jsp:useBean id="catBean" class="by.grsu.cats.editor.beans.CatBean" scope="session"/>
+<jsp:useBean id="cat" class="by.grsu.cats.editor.beans.CatBean" scope="request"/>
 
-<jsp:setProperty name="catBean" property="name" param="name"></jsp:setProperty>
-<jsp:setProperty name="catBean" property="color" param="color"></jsp:setProperty>
+<jsp:setProperty name="cat" property="name" param="name"></jsp:setProperty>
+<jsp:setProperty name="cat" property="color" param="color"></jsp:setProperty>
 
-<% System.out.println(catBean.toString());
+<% System.out.println(cat.toString());
     Enumeration<String> arr = request.getParameterNames();
     while(arr.hasMoreElements()) {
         String cur = arr.nextElement();
@@ -23,9 +23,9 @@
     }
 %>;
 <c:choose>
-    <c:when test="${catBean.colorValid && catBean.nameValid}">
+    <c:when test="${cat.colorValid && cat.nameValid}">
         <jsp:forward page="catProfile.jsp">
-            <jsp:param name="hash" value="${catBean.hash}"/>
+            <jsp:param name="hash" value="${cat.hash}"/>
         </jsp:forward>
     </c:when>
     <c:otherwise>
