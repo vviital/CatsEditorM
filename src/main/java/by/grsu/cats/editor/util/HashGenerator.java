@@ -11,7 +11,7 @@ public class HashGenerator {
 
     public static long getNext() {
         long rnd = random.nextLong();
-        System.out.println(rnd);
+        //System.out.println(rnd);
         return rnd;
     }
 }

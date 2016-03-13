@@ -24,6 +24,12 @@ public class CatBean implements Cloneable {
         init();
     }
 
+    public CatBean(long hash, String color, String name) {
+        setHash(hash);
+        setColor(color);
+        setName(name);
+    }
+
     public String getName() {
         return name;
     }

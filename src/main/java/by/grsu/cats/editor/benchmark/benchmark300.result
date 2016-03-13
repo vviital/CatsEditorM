@@ -1,0 +1,210 @@
+Cats number: 10
+insertTime = 912
+updateTime = 345
+singleSelectTime = 45
+fullSelectTime = 7
+deleteTime = 340
+--------------------------------------------
+Cats number: 20
+insertTime = 902
+updateTime = 1069
+singleSelectTime = 76
+fullSelectTime = 4
+deleteTime = 1467
+--------------------------------------------
+Cats number: 30
+insertTime = 1160
+updateTime = 1348
+singleSelectTime = 78
+fullSelectTime = 2
+deleteTime = 1268
+--------------------------------------------
+Cats number: 40
+insertTime = 1966
+updateTime = 1912
+singleSelectTime = 85
+fullSelectTime = 2
+deleteTime = 1986
+--------------------------------------------
+Cats number: 50
+insertTime = 2250
+updateTime = 2174
+singleSelectTime = 82
+fullSelectTime = 2
+deleteTime = 2423
+--------------------------------------------
+Cats number: 60
+insertTime = 3152
+updateTime = 2730
+singleSelectTime = 152
+fullSelectTime = 2
+deleteTime = 2799
+--------------------------------------------
+Cats number: 70
+insertTime = 3732
+updateTime = 3488
+singleSelectTime = 174
+fullSelectTime = 2
+deleteTime = 3310
+--------------------------------------------
+Cats number: 80
+insertTime = 4045
+updateTime = 3455
+singleSelectTime = 171
+fullSelectTime = 1
+deleteTime = 3584
+--------------------------------------------
+Cats number: 90
+insertTime = 4178
+updateTime = 4024
+singleSelectTime = 178
+fullSelectTime = 2
+deleteTime = 4599
+--------------------------------------------
+Cats number: 100
+insertTime = 4646
+updateTime = 5127
+singleSelectTime = 173
+fullSelectTime = 1
+deleteTime = 4073
+--------------------------------------------
+Cats number: 110
+insertTime = 4847
+updateTime = 5182
+singleSelectTime = 210
+fullSelectTime = 2
+deleteTime = 5080
+--------------------------------------------
+Cats number: 120
+insertTime = 5195
+updateTime = 5872
+singleSelectTime = 210
+fullSelectTime = 1
+deleteTime = 5538
+--------------------------------------------
+Cats number: 130
+insertTime = 6519
+updateTime = 5494
+singleSelectTime = 232
+fullSelectTime = 1
+deleteTime = 6073
+--------------------------------------------
+Cats number: 140
+insertTime = 6375
+updateTime = 7041
+singleSelectTime = 176
+fullSelectTime = 2
+deleteTime = 6425
+--------------------------------------------
+Cats number: 150
+insertTime = 7223
+updateTime = 7277
+singleSelectTime = 274
+fullSelectTime = 2
+deleteTime = 7621
+--------------------------------------------
+Cats number: 160
+insertTime = 7923
+updateTime = 7011
+singleSelectTime = 227
+fullSelectTime = 1
+deleteTime = 7326
+--------------------------------------------
+Cats number: 170
+insertTime = 7245
+updateTime = 7667
+singleSelectTime = 222
+fullSelectTime = 1
+deleteTime = 7786
+--------------------------------------------
+Cats number: 180
+insertTime = 8738
+updateTime = 8158
+singleSelectTime = 215
+fullSelectTime = 1
+deleteTime = 7820
+--------------------------------------------
+Cats number: 190
+insertTime = 8803
+updateTime = 8870
+singleSelectTime = 235
+fullSelectTime = 1
+deleteTime = 9335
+--------------------------------------------
+Cats number: 200
+insertTime = 10626
+updateTime = 9028
+singleSelectTime = 232
+fullSelectTime = 1
+deleteTime = 8604
+--------------------------------------------
+Cats number: 210
+insertTime = 9608
+updateTime = 10317
+singleSelectTime = 317
+fullSelectTime = 1
+deleteTime = 9675
+--------------------------------------------
+Cats number: 220
+insertTime = 10552
+updateTime = 9841
+singleSelectTime = 240
+fullSelectTime = 2
+deleteTime = 9988
+--------------------------------------------
+Cats number: 230
+insertTime = 10586
+updateTime = 10621
+singleSelectTime = 291
+fullSelectTime = 1
+deleteTime = 11295
+--------------------------------------------
+Cats number: 240
+insertTime = 11221
+updateTime = 12343
+singleSelectTime = 417
+fullSelectTime = 2
+deleteTime = 12515
+--------------------------------------------
+Cats number: 250
+insertTime = 11244
+updateTime = 12202
+singleSelectTime = 380
+fullSelectTime = 2
+deleteTime = 11506
+--------------------------------------------
+Cats number: 260
+insertTime = 11958
+updateTime = 11137
+singleSelectTime = 447
+fullSelectTime = 2
+deleteTime = 12721
+--------------------------------------------
+Cats number: 270
+insertTime = 12515
+updateTime = 11893
+singleSelectTime = 375
+fullSelectTime = 2
+deleteTime = 12528
+--------------------------------------------
+Cats number: 280
+insertTime = 12716
+updateTime = 12461
+singleSelectTime = 511
+fullSelectTime = 2
+deleteTime = 13181
+--------------------------------------------
+Cats number: 290
+insertTime = 13449
+updateTime = 13408
+singleSelectTime = 463
+fullSelectTime = 2
+deleteTime = 13385
+--------------------------------------------
+Cats number: 300
+insertTime = 13651
+updateTime = 14385
+singleSelectTime = 391
+fullSelectTime = 1
+deleteTime = 12981
+--------------------------------------------

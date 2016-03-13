@@ -43,7 +43,6 @@
                 <c:choose>
                     <c:when test="${catSave.colorValid || param.color == null}">
                         <input class="inputText" type="text" name="color" value="<c:out value="${catSave.color}"/>"/>
-
                     </c:when>
                     <c:otherwise>
                         <input class="inputText error" class="error" type="text" name="color" value="<c:out value="${catSave.color}"/>"/>
