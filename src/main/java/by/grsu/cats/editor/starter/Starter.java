@@ -8,8 +8,8 @@ import by.grsu.cats.editor.benchmark.Benchmark;
 public class Starter {
     public static void main(String[] args) {
         Benchmark benchmark = new Benchmark();
-        for(int i = 10; i <= 200; i += 10) {
-            benchmark.benchmark(i);
-        }
+        //for(int i = 10; i <= 200; i += 10) {
+            benchmark.benchmark(200);
+        //}
     }
 }
