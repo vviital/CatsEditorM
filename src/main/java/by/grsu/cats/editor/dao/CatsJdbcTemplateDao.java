@@ -2,12 +2,10 @@ package by.grsu.cats.editor.dao;
 
 import by.grsu.cats.editor.beans.CatBean;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.*;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ExecutionException;
+import java.util.*;
 
 /**
  * Created by vviital on 9.3.16.
@@ -44,8 +42,8 @@ public class CatsJdbcTemplateDao implements CatsDao {
 
     @Override
     public CatBean getCat(long id) {
-        String sql = "SELECT idCats, name, color FROM Cats WHERE idCats =" + id;
-        CatBean cat = jdbcTemplate.query(sql, new CatsMapper()).get(0);
+        String sql = "SELECT idCats, name, color FROM Cats WHERE idCats = ?";
+        CatBean cat = jdbcTemplate.queryForObject(sql, new CatsMapper(), id);
         return cat;
     }
 
@@ -59,4 +57,31 @@ public class CatsJdbcTemplateDao implements CatsDao {
         }
         return cats;
     }
+
+    @Override
+    public void update(List<CatBean> cats) {
+        String sql = "update Cats set name = ?, color = ? where idCats = ?";
+        List<Object[]> batch = new ArrayList<Object[]>();
+        for(CatBean cat : cats) {
+            Object[] values =  new Object[]{
+                    cat.getName(),
+                    cat.getColor(),
+                    cat.getHash()
+            };
+            batch.add(values);
+        }
+        int[] updateCounts = jdbcTemplate.batchUpdate(sql, batch);
+    }
+
+    private class CatsMapper implements RowMapper<CatBean> {
+        @Override
+        public CatBean mapRow(ResultSet resultSet, int i) throws SQLException {
+            CatBean cat = new CatBean();
+            cat.setHash(resultSet.getLong("idCats"));
+            cat.setName(resultSet.getString("name"));
+            cat.setColor(resultSet.getString("color"));
+            return cat;
+        }
+    }
+
 }

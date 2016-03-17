@@ -58,10 +58,11 @@ public class Benchmark {
 
     private long updateTest(List<CatBean> cats) {
         long startTime = System.currentTimeMillis();
-        for (CatBean cat : cats) {
-            cat.setName(cat.getName().concat(" " + cat.getName()));
-            dao.update(cat);
-        }
+        dao.update(cats);
+//        for (CatBean cat : cats) {
+//            cat.setName(cat.getName().concat(" " + cat.getName()));
+//            dao.update(cat);
+//        }
         long endTime = System.currentTimeMillis();
         return endTime - startTime;
     }

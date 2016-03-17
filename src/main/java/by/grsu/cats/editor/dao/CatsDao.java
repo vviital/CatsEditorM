@@ -2,6 +2,7 @@ package by.grsu.cats.editor.dao;
 
 import by.grsu.cats.editor.beans.CatBean;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -14,6 +15,8 @@ public interface CatsDao {
     void update(CatBean catBean);
 
     void delete(CatBean catBean);
+
+    void update(List<CatBean> cats);
 
     CatBean getCat(long id);
 
