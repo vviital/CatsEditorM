@@ -13,6 +13,7 @@ public class CatBean implements Cloneable {
 
     private String name;
     private String color;
+    private Collar collar;
 
     private Validator colorValidator = new ColorValidator();
     private Validator nameValidator = new NameValidator();
@@ -87,6 +88,14 @@ public class CatBean implements Cloneable {
 
     public boolean isValid() {
         return this.isColorValid && this.isNameValid;
+    }
+
+    public Collar getCollar() {
+        return collar;
+    }
+
+    public void setCollar(Collar collar) {
+        this.collar = collar;
     }
 
     public CatBean clone() {
