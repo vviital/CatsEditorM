@@ -3,20 +3,20 @@
         "-//Hibernate/Hibernate Mapping DTD//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="by.grsu.cats.editor.beans.CatBean" table="Cats">
+    <class name="by.grsu.cats.editor.beans.Cat" table="Cats">
         <id name="hash" column="id" type="java.lang.Long">
             <generator class="native"/>
         </id>
         <property name="name" column="name" type="java.lang.String"/>
         <property name="color" column="color" type="java.lang.String"/>
-        <one-to-one name="collar" class="by.grsu.cats.editor.beans.Collar" cascade="all"/>
+        <one-to-one name="collar" fetch="select" lazy="false" class="by.grsu.cats.editor.beans.Collar" cascade="all"/>
     </class>
-    <class name="by.grsu.cats.editor.beans.Collar" table="collars">
+    <class name="by.grsu.cats.editor.beans.Collar" table="Collars">
         <id name="id" column="id" type="java.lang.Long">
             <generator class="native"/>
         </id>
         <property name="text" column="text" type="java.lang.String"/>
         <property name="color" column="color" type="java.lang.String"/>
-        <one-to-one name="catBean" class="by.grsu.cats.editor.beans.CatBean" cascade="all"/>
+        <one-to-one name="cat" fetch="select" lazy="false" class="by.grsu.cats.editor.beans.Cat" cascade="all"/>
     </class>
 </hibernate-mapping>

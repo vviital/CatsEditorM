@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<jsp:useBean id="cat" class="by.grsu.cats.editor.beans.CatBean" scope="request"/>
+<jsp:useBean id="cat" class="by.grsu.cats.editor.beans.Cat" scope="request"/>
 
 <jsp:setProperty name="cat" property="name" param="name"></jsp:setProperty>
 <jsp:setProperty name="cat" property="color" param="color"></jsp:setProperty>

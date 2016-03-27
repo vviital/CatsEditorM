@@ -8,17 +8,17 @@ import java.util.Map;
  */
 public class CatsCollectionBean {
 
-    private Map<Long, CatBean> catBeanMap = new HashMap<Long, CatBean>();
+    private Map<Long, Cat> catBeanMap = new HashMap<Long, Cat>();
 
     public CatsCollectionBean() {
 
     }
 
-    public Map<Long, CatBean> getCatBeanMap() {
+    public Map<Long, Cat> getCatBeanMap() {
         return this.catBeanMap;
     }
 
-    public void addCat(CatBean cat) {
+    public void addCat(Cat cat) {
         this.catBeanMap.put(cat.getHash(), cat);
     }
 
@@ -32,9 +32,9 @@ public class CatsCollectionBean {
         return ok;
     }
 
-    public CatBean getCat(long hash) {
+    public Cat getCat(long hash) {
         if (find(hash)) return this.catBeanMap.get(hash);
-        return new CatBean();
+        return new Cat();
     }
 
     public boolean find(long hash) {

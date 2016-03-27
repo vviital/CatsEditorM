@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <!--Business objects-->
+    <bean id="CatsBo" class="by.grsu.cats.editor.bo.CatsBo">
+        <property name="catsDao" ref="CatsDao"/>
+    </bean>
+    <bean id="CollarBo" class="by.grsu.cats.editor.bo.CollarBo">
+        <property name="collarDao" ref="CollarDao"/>
+    </bean>
+
+    <!--Dao beans-->
+    <bean id="CatsDao" class="by.grsu.cats.editor.dao.CatsDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+    <bean id="CollarDao" class="by.grsu.cats.editor.dao.CollarDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
+    </bean>
+</beans>

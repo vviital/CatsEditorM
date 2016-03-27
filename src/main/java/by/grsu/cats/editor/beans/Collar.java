@@ -8,10 +8,25 @@ public class Collar {
     private long id;
     private String text;
     private String color;
-    private CatBean catBean;
+    private Cat cat;
 
     public Collar() {
 
+    }
+
+    public Collar(long id, String text, String color, Cat cat) {
+        this.id = id;
+        this.text = text;
+        this.color = color;
+        this.cat = cat;
+        cat.setCollar(this);
+    }
+
+    public Collar(String text, String color, Cat cat) {
+        this.text = text;
+        this.color = color;
+        this.cat = cat;
+        cat.setCollar(this);
     }
 
     public long getId() {
@@ -38,11 +53,22 @@ public class Collar {
         this.color = color;
     }
 
-    public CatBean getCatBean() {
-        return catBean;
+    public Cat getCat() {
+        return cat;
     }
 
-    public void setCatBean(CatBean catBean) {
-        this.catBean = catBean;
+    public void setCat(Cat cat) {
+        this.cat = cat;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("{ ");
+        builder.append("\tid = " + id);
+        builder.append("\ttext = " + text);
+        builder.append("\tcolor = " + color);
+        builder.append(" }\t");
+        return builder.toString();
     }
 }

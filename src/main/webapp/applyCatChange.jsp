@@ -7,11 +7,11 @@
 </head>
 <body>
 
-    <jsp:useBean id="catBean" class="by.grsu.cats.editor.beans.CatBean" scope="session"/>
-    <jsp:setProperty name="catBean" property="*"/>
+    <jsp:useBean id="cat" class="by.grsu.cats.editor.beans.Cat" scope="session"/>
+    <jsp:setProperty name="cat" property="*"/>
 
     <%
-        System.out.println(catBean.toString());
+        System.out.println(cat.toString());
         System.out.println(request.getParameter("save"));
         System.out.println(request.getParameter("remove"));
     %>

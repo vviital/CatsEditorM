@@ -11,7 +11,7 @@
 
 <jsp:include page="header.jsp"/>
 
-<jsp:useBean id="catSave" class="by.grsu.cats.editor.beans.CatBean" scope="page">
+<jsp:useBean id="catSave" class="by.grsu.cats.editor.beans.Cat" scope="page">
     <jsp:setProperty name="catSave" property="name" param="name"></jsp:setProperty>
     <jsp:setProperty name="catSave" property="color" param="color"></jsp:setProperty>
 </jsp:useBean>

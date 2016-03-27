@@ -1,6 +1,6 @@
 package by.grsu.cats.editor.servlets;
 
-import by.grsu.cats.editor.beans.CatBean;
+import by.grsu.cats.editor.beans.Cat;
 import by.grsu.cats.editor.beans.CatsCollectionBean;
 
 import javax.servlet.RequestDispatcher;
@@ -19,7 +19,7 @@ public class ProfileController extends HttpServlet{
         String removeCommand = req.getParameter("remove");
         String saveCommand = req.getParameter("save");
         CatsCollectionBean catsCollection = (CatsCollectionBean)req.getSession().getAttribute("catsCollection");
-        CatBean cat = (CatBean) req.getSession().getAttribute("catBean");
+        Cat cat = (Cat) req.getSession().getAttribute("catBean");
 
         if ("remove".equals(removeCommand)) {
             catsCollection.tryRemove(cat.getHash());

@@ -11,7 +11,7 @@
 
 <jsp:include page="header.jsp"/>
 
-<jsp:useBean id="cat" scope="request" class="by.grsu.cats.editor.beans.CatBean"/>
+<jsp:useBean id="cat" scope="request" class="by.grsu.cats.editor.beans.Cat"/>
 <jsp:setProperty name="cat" property="*"></jsp:setProperty>
 
 <table class="profileTable">

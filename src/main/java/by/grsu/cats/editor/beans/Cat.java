@@ -1,6 +1,5 @@
 package by.grsu.cats.editor.beans;
 
-import by.grsu.cats.editor.util.HashGenerator;
 import by.grsu.cats.editor.validators.ColorValidator;
 import by.grsu.cats.editor.validators.NameValidator;
 import by.grsu.cats.editor.validators.Validator;
@@ -8,7 +7,7 @@ import by.grsu.cats.editor.validators.Validator;
 /**
  * Created by vviital on 5.3.16.
  */
-public class CatBean implements Cloneable {
+public class Cat implements Cloneable {
     private long hash;
 
     private String name;
@@ -21,12 +20,17 @@ public class CatBean implements Cloneable {
     private boolean isColorValid = true;
     private boolean isNameValid = true;
 
-    public CatBean() {
+    public Cat() {
         init();
     }
 
-    public CatBean(long hash, String color, String name) {
+    public Cat(long hash, String color, String name) {
         setHash(hash);
+        setColor(color);
+        setName(name);
+    }
+
+    public Cat(String color, String name) {
         setColor(color);
         setName(name);
     }
@@ -66,6 +70,7 @@ public class CatBean implements Cloneable {
         builder.append("\tcolor = " + this.color);
         builder.append("\tisColorValid = " + this.isColorValid);
         builder.append("\tisNameValid = " + this.isNameValid);
+        builder.append("\t" + this.collar.toString());
         builder.append(" }\n");
         return builder.toString();
     }
@@ -75,7 +80,6 @@ public class CatBean implements Cloneable {
         this.nameValidator = new NameValidator();
         this.isColorValid = false;
         this.isNameValid = false;
-        this.hash = HashGenerator.getNext();
     }
 
     public long getHash() {
@@ -87,7 +91,7 @@ public class CatBean implements Cloneable {
     }
 
     public boolean isValid() {
-        return this.isColorValid && this.isNameValid;
+        return this.isColorValid() && this.isNameValid();
     }
 
     public Collar getCollar() {
@@ -98,11 +102,11 @@ public class CatBean implements Cloneable {
         this.collar = collar;
     }
 
-    public CatBean clone() {
-        CatBean catBean = new CatBean();
-        catBean.setColor(this.color);
-        catBean.setName(this.name);
-        catBean.setHash(this.hash);
-        return catBean;
+    public Cat clone() {
+        Cat cat = new Cat();
+        cat.setColor(this.color);
+        cat.setName(this.name);
+        cat.setHash(this.hash);
+        return cat;
     }
 }
